@@ -1,104 +1,106 @@
 body {
-    background: #f4f6fb;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
+  background: #f4f6fb;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 40px auto 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px 0 #b2c4ff33;
+  padding: 2rem;
+}
+
+h1 {
+  color: #1976d2;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+  color: #555;
+}
+
+form input[type="number"] {
+  width: 90px;
+  padding: 7px;
+  border: 1px solid #b3b3b3;
+  border-radius: 6px;
+  margin: 2px 8px 2px 0;
+  font-size: 1rem;
+}
+input[type=number][id^="angulo"] {
+  width: 50px;
+  text-align: right;
+  margin-right: 8px;
+}
+form select {
+  padding: 7px;
+  border: 1px solid #b3b3b3;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-right: 6px;
+}
+
+#gerar-campos, #calcular-area {
+  background: #1976d2;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 20px 4px 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px #ccddff55;
+}
+#gerar-campos:hover, #calcular-area:hover {
+  background: #1564b2;
+}
+
+#campos-medidas>div {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+#campos-medidas span {
+  min-width: 64px;
+  color: #1976d2;
+}
+
+#resultado {
+  text-align: center;
+  margin: 1.2rem 0 0.6rem 0;
+}
+#resultado h2 {
+  font-size: 2rem;
+  color: #1564b2;
+  margin-bottom: 0;
+}
+
+canvas {
+  margin: 0 auto 10px auto;
+  display: block;
+  box-shadow: 0 2px 8px #1564b277;
+  border-radius: 9px;
+  background: #eef5ff;
+}
+
+@media (max-width: 600px) {
   .container {
-    max-width: 400px;
-    margin: 40px auto 0 auto;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 16px 0 #b2c4ff33;
-    padding: 2rem;
+    max-width: 96vw;
+    padding: 8vw 2vw 6vw 2vw;
   }
-  
-  h1 {
-    color: #1976d2;
-    text-align: center;
-    margin-bottom: 1.2rem;
-    letter-spacing: 1px;
-  }
-  
-  form label {
-    display: block;
-    margin-bottom: 0.7rem;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  form input[type="number"] {
-    width: 90px;
-    padding: 7px;
-    border: 1px solid #b3b3b3;
-    border-radius: 6px;
-    margin: 2px 10px 2px 0;
-    font-size: 1rem;
-  }
-  
-  form select {
-    padding: 7px;
-    border: 1px solid #b3b3b3;
-    border-radius: 6px;
-    font-size: 1rem;
-    margin-right: 6px;
-  }
-  
-  #gerar-campos, #calcular-area {
-    background: #1976d2;
-    color: #fff;
-    font-weight: bold;
-    padding: 10px 20px;
-    margin: 20px 4px 10px 0;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background 0.2s;
-    box-shadow: 0 2px 8px #ccddff55;
-  }
-  #gerar-campos:hover, #calcular-area:hover {
-    background: #1564b2;
-  }
-  
-  #campos-medidas>div {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-  }
-  
-  #campos-medidas span {
-    min-width: 64px;
-    color: #1976d2;
-  }
-  
-  #resultado {
-    text-align: center;
-    margin: 1.2rem 0 0.6rem 0;
-  }
-  
-  #resultado h2 {
-    font-size: 2rem;
-    color: #1564b2;
-    margin-bottom: 0;
-  }
-  
   canvas {
-    margin: 0 auto 10px auto;
-    display: block;
-    box-shadow: 0 2px 8px #1564b277;
-    border-radius: 9px;
-    background: #eef5ff;
+    width: 94vw !important;
+    height: 60vw !important;
   }
-  
-  @media (max-width: 600px) {
-    .container {
-      max-width: 96vw;
-      padding: 8vw 2vw 6vw 2vw;
-    }
-    canvas {
-      width: 94vw !important;
-      height: 60vw !important;
-    }
-  }
+}
