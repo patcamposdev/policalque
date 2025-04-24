@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PoliCalque</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <title>PoliCalque - Calculadora de Polígonos</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>PoliCalque</h1>
-    <form id="polygon-form">
-      <label for="num-lados">Número de lados:</label>
-      <input type="number" id="num-lados" min="4" max="20" required>
+    <h1>
+      PoliCalque<br>
+      <span style="font-size:1rem;font-weight:normal;color:#555">Calculadora de Áreas de Polígonos</span>
+    </h1>
+
+    <form id="polygon-form" autocomplete="off">
+      <label for="num-lados">Quantos lados?</label>
+      <input type="number" min="3" max="20" id="num-lados" required style="width:60px;">
       <button type="button" id="gerar-campos">Gerar campos</button>
       <div id="campos-medidas"></div>
-      <button type="submit" id="calcular-area" style="display:none;">Calcular Área</button>
+      <button type="submit" id="calcular-area" style="display:none;">Calcular área</button>
     </form>
     <div id="resultado"></div>
-    <canvas id="canvas" width="400" height="400" style="display:none;"></canvas>
+    <canvas id="canvas" width="380" height="240" style="display:none;"></canvas>
   </div>
   <script src="app.js"></script>
 </body>
